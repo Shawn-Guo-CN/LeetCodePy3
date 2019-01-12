@@ -4,6 +4,7 @@
 # @Author  : Shawn
 # @File    : 5LongestPalindromicSubstring.py
 
+
 class Solution:
     # Manacher algorithm
     # http://en.wikipedia.org/wiki/Longest_palindromic_substring
@@ -32,6 +33,7 @@ class Solution:
         # Find the maximum element in P.
         maxLen, centerIndex = max((n, i) for i, n in enumerate(P))
         return s[(centerIndex - maxLen) // 2: (centerIndex + maxLen) // 2]
+
 
 if __name__ == '__main__':
     s = "bababd"
