@@ -4,8 +4,10 @@
 # @Author  : Shawn
 # @File    : 1TwoSum.py
 
+
 class Solution:
-    def twoSum_bak(self, nums, target):
+
+    def twoSum(self, nums, target):
         """
         :type nums: List[int]
         :type target: int

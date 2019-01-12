@@ -6,6 +6,7 @@
 
 
 class Solution:
+
     def findMedianSortedArrays(self, A, B):
         """
         :type A: List[int]

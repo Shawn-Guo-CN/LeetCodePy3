@@ -4,7 +4,9 @@
 # @Author  : Shawn
 # @File    : 3LongestSubstrWithoutRepeatingChars.py
 
+
 class Solution:
+
     def lengthOfLongestSubstring(self, s):
         """
         :type s: str
