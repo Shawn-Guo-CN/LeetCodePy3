@@ -4,6 +4,7 @@
 # @Author  : Shawn
 # @File    : 6ZigZagConversion.py
 
+
 class Solution:
     def convert(self, s, numRows):
         """
