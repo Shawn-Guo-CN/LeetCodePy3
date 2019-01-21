@@ -12,11 +12,11 @@ class Solution(object):
         :rtype: str
         """
         romans = ["M", "CM", "D", "CD", "C", "XC", "L", "XL", "X", "IX", "V", "IV", "I"]
-        numbers = [1000, 900, 500, 400, 100, 90, 50, 40, 10, 9, 5, 4, 1]
+        decimals = [1000, 900, 500, 400, 100, 90, 50, 40, 10, 9, 5, 4, 1]
         result = ''
         for i in range(len(romans)):
-            while num >= numbers[i]:
-                num -= numbers[i]
+            while num >= decimals[i]:
+                num -= decimals[i]
                 result += romans[i]
         return result
 
