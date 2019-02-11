@@ -15,7 +15,8 @@ class Solution:
         return results
 
     def find_N_sum(self, l, r, target, N, result, results):
-        if r - l + 1 < N or N < 2 or target < self.nums[l]*N or target > self.nums[r]*N:  # early termination
+        # early termination
+        if r - l + 1 < N or N < 2 or target < self.nums[l]*N or target > self.nums[r]*N:
             return
         # two pointers solve sorted 2-sum problem
         if N == 2:
