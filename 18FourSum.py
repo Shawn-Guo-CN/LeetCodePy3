@@ -5,15 +5,16 @@
 # @File    : 18FourSum.py
 # @Classes :
 
+
 class Solution:
     def fourSum(self, nums: 'List[int]', target: 'int') -> 'List[List[int]]':
         nums.sort()
         self.nums = nums
         results = []
-        self.findNsum(0, len(self.nums) - 1, target, 4, [], results)
+        self.find_N_sum(0, len(self.nums) - 1, target, 4, [], results)
         return results
 
-    def findNsum(self, l, r, target, N, result, results):
+    def find_N_sum(self, l, r, target, N, result, results):
         if r-l+1 < N or N < 2 or target < self.nums[l]*N or target > self.nums[r]*N:  # early termination
             return
         if N == 2: # two pointers solve sorted 2-sum problem
@@ -31,5 +32,5 @@ class Solution:
         else: # recursively reduce N
             for i in range(l, r+1):
                 if i == l or (i > l and self.nums[i-1] != self.nums[i]):
-                    self.findNsum(i+1, r, target-self.nums[i], N-1, result+[self.nums[i]], results)
+                    self.find_N_sum(i+1, r, target-self.nums[i], N-1, result+[self.nums[i]], results)
 
