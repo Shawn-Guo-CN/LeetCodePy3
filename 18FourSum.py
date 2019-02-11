@@ -30,7 +30,8 @@ class Solution:
                     l += 1
                 else:
                     r -= 1
-        else: # recursively reduce N
+        # recursively reduce N
+        else:
             for i in range(l, r+1):
                 if i == l or (i > l and self.nums[i-1] != self.nums[i]):
                     self.find_N_sum(i+1, r, target-self.nums[i], N-1, result+[self.nums[i]], results)
