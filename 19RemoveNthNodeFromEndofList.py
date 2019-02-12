@@ -8,21 +8,20 @@
 
 class Solution:
     def removeNthFromEnd(self, head: 'ListNode', n: 'int') -> 'ListNode':
-        count = 0
         n_forward_node = head
-        while count < n:
-            count += 1
+        for _ in range(n):
             n_forward_node = n_forward_node.next
 
-        pre_cur = None
+        if n_forward_node is None:
+            return head.next
+
         cur = head
-        while n_forward_node is not None:
-            pre_cur = cur
+        while n_forward_node.next is not None:
             cur = cur.next
             n_forward_node = n_forward_node.next
 
-        if pre_cur is not None:
-            pre_cur.next = cur.next
-            return head
+        if cur and cur.next:
+            cur.next = cur.next.next
         else:
-            return []
+            cur.next = None
+        return head
